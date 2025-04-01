@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import "tailwindcss";
+@config "../tailwind.config.js";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.dm-sans-class{
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Base styles for all steps */
+.step-container {
+  transition: all 0.3s ease;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+
+/* Style for step 01 and hover state for all steps */
+/* .step-container:hover {
+  border-top: 4px solid #4CAF50; 
+  
+  transition: border;
+} */
+
+
+
+.step-container {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures no layout shifts */
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Creating the top border effect */
+.step-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;  /* Start from 25% to make width 50% */
+  width: 0%; /* Initial width is 50% */
+  height: 4px;
+  background-color: #239C0C;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Expand border on hover */
+.step-container:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
